@@ -74,11 +74,17 @@
         <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Assignment" inverseName="assignmentGroup" inverseEntity="Assignment"/>
     </entity>
     <entity name="CalendarEventItem" representedClassName="Core.CalendarEventItem" syncable="YES">
+        <attribute name="contextName" attributeType="String"/>
         <attribute name="contextRaw" attributeType="String"/>
+        <attribute name="details" optional="YES" attributeType="String"/>
+        <attribute name="effectiveContextRaw" optional="YES" attributeType="String"/>
         <attribute name="endAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="hasStartAt" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="htmlUrl" attributeType="URI"/>
+        <attribute name="htmlURL" attributeType="URI"/>
         <attribute name="id" attributeType="String"/>
+        <attribute name="isAllDay" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="locationAddress" optional="YES" attributeType="String"/>
+        <attribute name="locationName" optional="YES" attributeType="String"/>
         <attribute name="startAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" attributeType="String"/>
         <attribute name="typeRaw" attributeType="String"/>
@@ -743,7 +749,7 @@
         <element name="Assignment" positionX="-507.2109375" positionY="194.3515625" width="128" height="613"/>
         <element name="AssignmentDate" positionX="-540" positionY="-18" width="128" height="148"/>
         <element name="AssignmentGroup" positionX="-540" positionY="-27" width="128" height="120"/>
-        <element name="CalendarEventItem" positionX="-531" positionY="-18" width="128" height="163"/>
+        <element name="CalendarEventItem" positionX="-531" positionY="-18" width="128" height="253"/>
         <element name="CommonCourse" positionX="-540" positionY="-18" width="128" height="88"/>
         <element name="CommunicationChannel" positionX="-531" positionY="-9" width="128" height="133"/>
         <element name="Conference" positionX="-540" positionY="-18" width="128" height="268"/>
@@ -754,6 +760,7 @@
         <element name="ConversationParticipant" positionX="-531" positionY="-9" width="128" height="118"/>
         <element name="Course" positionX="-365.20703125" positionY="2.984375" width="128" height="253"/>
         <element name="CourseSection" positionX="-540" positionY="-18" width="128" height="148"/>
+        <element name="CourseSettings" positionX="-540" positionY="-18" width="128" height="88"/>
         <element name="DiscussionEntry" positionX="-513.66796875" positionY="535.73828125" width="128" height="313"/>
         <element name="DiscussionParticipant" positionX="-540" positionY="-18" width="128" height="133"/>
         <element name="DiscussionTopic" positionX="-540" positionY="-27" width="128" height="433"/>
@@ -797,6 +804,5 @@
         <element name="User" positionX="-540" positionY="-27" width="128" height="223"/>
         <element name="UserProfile" positionX="-540" positionY="-18" width="128" height="148"/>
         <element name="UserSettings" positionX="-540" positionY="-27" width="128" height="90"/>
-        <element name="CourseSettings" positionX="-540" positionY="-18" width="128" height="88"/>
     </elements>
 </model>
